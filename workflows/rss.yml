@@ -2,8 +2,8 @@ name: Send a HTTP Request when new RSS item is detected
 on:
   rss:
     url: 
-    - https://sspai.com/feed
-    - https://www.zhihu.com/rss
+      - https://sspai.com/feed
+      - https://www.zhihu.com/rss
 jobs:
   request:
     name: Request
@@ -13,7 +13,7 @@ jobs:
         uses: actionsflow/axios@main
         with:
           url: https://cubox.pro/c/api/save/od630hfhofe7t1
-          method: POSt
+          method: POST
           body: |
             {
               "link":"${{on.rss.outputs.link}}", 
