@@ -1,7 +1,9 @@
 name: Send a HTTP Request when new RSS item is detected
 on:
   rss:
-    url: https://hnrss.org/newest?count=15
+    url: 
+    - https://sspai.com/feed
+    - https://www.zhihu.com/rss
 jobs:
   request:
     name: Request
